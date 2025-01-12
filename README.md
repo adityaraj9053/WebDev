@@ -74,3 +74,7 @@ it will show:
 
 Clearly, we can see with the help of proxy we had set the well-defined custom behaviour i.e. " any value other than previous seted, give "404, error".
 
+### Generators:
+function which can be exited and later re-entered. Their context will be saved across re-entrances.
+
+

@@ -28,18 +28,26 @@ proxy:
     }
     const handler = {
       get: (target, name) => {
-        name in target ? console.log(target[name]): console.log('404 not found');
+        name in target ? console.log(target[name]): console.log('404 not found');  // means if name is given then, 
       },
       set: (target, name, value) => {
         target[name] = value;
       }
     }
     const staffProxy = new Proxy(staff, handler);
-  On giving following command:
-  
-     staffProxy.position;
- It will show the 404 not error. 
+On giving following command:
 
+    staffProxy.name;
+It will  show:
+
+    Ansh
+On giving following command:
+  
+     staffProxy.position;  
+ It will show: 
+ 
+     404 not found 
+___________________________________________________________________________________________________________________
  getter:
  
       const staff = {
@@ -52,10 +60,17 @@ proxy:
     get age(){
         console.log(this._age);
     },
-    set age(newAge) {
+      set age(newAge) {
         this._age = newAge;
         console.log(this._age);
-    }
-};
-staff.name;
+      }
+    };
+On giving following command:
+
+    staff.position;
+it will show:
+
+    undefined
+
+Clearly, we can see with the help of proxy we had set the well-defined custom behaviour i.e. " any value other than previous seted, give "404, error".
 

@@ -77,4 +77,46 @@ Clearly, we can see with the help of proxy we had set the well-defined custom be
 ### Generators:
 function which can be exited and later re-entered. Their context will be saved across re-entrances.
 
+    function* numbGen() {
+      yield 1;
+      yield 25;
+      yield 3;
+      yield 4;
+    }
+    const gen = numbGen();
+output:
 
+    console.log(gen.next());
+    {value: 1, done: false}
+    value: 25, done: false}
+    value: 3, done: false}
+    value: 4, done: false}
+    value: undefined, done: true}
+
+if: console.log(gen.next().value);
+
+    1
+    2
+    3
+    4
+    undefined
+
+Basically, it is used to generate numbers. Ex- if we want to print 1 billion nummbers, then, firstly we have to store that numbers then, print. It will take lots of space. <b> other way is to use Generators <b>.
+
+    function* numbGen() {
+     i = 0;
+    while(true){
+        yield i++;
+    }
+    }
+    const gen = numbGen();
+    console.log(gen.next().value);
+     1
+     2
+     3
+     4
+     5
+     6
+     7
+     8
+    

@@ -122,5 +122,38 @@ Basically, it is used to generate numbers. Ex- if we want to print 1 billion num
 
 ### Spreading property:
 It allows an iterable such as an array or string to be expanded into separate elements. (unpacks the elements)
-<b> Syntax <b>
-<b> For function call <b> 
+<p><b> Syntax <b></p>
+     
+![image](https://github.com/user-attachments/assets/75060577-01c5-49da-8ea3-afbedbe601d8)
+Ex:
+
+     let numbers = [1, 2, 3, 4, 5];
+     let max = Math.max(numbers);
+command:
+
+      console.log(max);
+Output : 
+
+      NaN
+.Using spreading operator:
+
+      let numbers = [1, 2, 3, 4, 5];
+     let max = Math.max(...numbers);
+command:
+
+      console.log(max);
+Output : 
+
+       5
+Ex- 2:
+
+       function sum(x, y, z) {
+          return x+y+z;
+       }
+       let numbers = [1, 2, 3];
+ command:
+
+      console.log(sum(...numbers)); // just expanding the argument
+Output : 
+
+      6    

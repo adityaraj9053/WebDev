@@ -119,4 +119,8 @@ Basically, it is used to generate numbers. Ex- if we want to print 1 billion num
      6
      7
      8
-    
+
+### Spreading property:
+It allows an iterable such as an array or string to be expanded into separate elements. (unpacks the elements)
+<b> Syntax <b>
+<b> For function call <b> 

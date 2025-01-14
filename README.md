@@ -157,3 +157,68 @@ Ex- 2:
 Output : 
 
       6    
+### Rest parameter:
+Allow a function to work with a variable no, of elements by bundling them into an array.
+
+<b> spread <b> - expands an array into separate elements.
+<b> rest <b> - bundles separate elements into an array.
+Ex-
+
+     const food1 = "pizza";
+     const food2 = "Apple";
+     const food3 = "CauliFlower";
+     const food4 = "Spinach";
+    const food5 = "Laddu";
+
+    function openFridge(...foods) {
+       console.log(foods);
+    }
+command:
+
+      openFridge(food1)
+Output : 
+
+      ["pizza"]
+command:
+
+      openFridge(food1, food2)
+Output : 
+
+      ["pizza", "Apple"]
+
+if you want not to show as an array, then:
+
+     const food1 = "pizza";
+     const food2 = "Apple";
+     const food3 = "CauliFlower";
+     const food4 = "Spinach";
+    const food5 = "Laddu";
+
+    function openFridge(...foods) {
+       console.log(...foods);        // PACE 3 DOTS HERE ALSO
+    }
+command:
+
+      openFridge(food1, food2, food5, food4, food3)
+Output : 
+
+      pizza Apple Laddu Spinach CauliFlower
+
+If you don't want to give command in function rather then want to give command in console log:  
+
+     const food1 = "pizza";
+     const food2 = "Apple";
+     const food3 = "CauliFlower";
+     const food4 = "Spinach";
+     const food5 = "Laddu";
+
+    function openFridge(...foods) {
+        return fods;
+    }
+    const kuchh = openFridge(food1, food2, food5, food4, food3);
+command:
+
+      console.log(kuchh);
+Output : 
+
+     ['pizza', 'Apple', 'Laddu', 'Spinach', 'CauliFlower']
